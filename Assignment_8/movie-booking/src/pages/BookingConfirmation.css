@@ -1,0 +1,28 @@
+.booking-confirmation {
+    text-align: center;
+    padding: 20px;
+}
+
+.booking-confirmation h2 {
+    color: #28a745;
+}
+
+.booking-confirmation p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.booking-confirmation button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.booking-confirmation button:hover {
+    background-color: #0056b3;
+}

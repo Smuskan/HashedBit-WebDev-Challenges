@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice 1 - Delta</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Practice 1 - Delta</h2>
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Output</th>
+        </tr>
+        <tbody id="output"></tbody>
+    </table>
+    
+    <script>
+        let outputTable = document.getElementById("output");
+        
+        function addRow(question, answer) {
+            outputTable.innerHTML += `<tr><td>${question}</td><td>${answer}</td></tr>`;
+        }
+        
+        // Scope difference: let, const, var
+        function variableScope() {
+            var a = "Var scope";
+            let b = "Let scope";
+            const c = "Const scope";
+            addRow("Difference in scope for let, const, and var", `Var: ${a}, Let: ${b}, Const: ${c}`);
+        }
+        variableScope();
+        
+        // Array and function to return second fruit
+        let fruits = ["Apple", "Banana", "Cherry", "Grapes", "Mango"];
+        function secondFruit(arr) {
+            return arr[1];
+        }
+        addRow("Second fruit in the array", secondFruit(fruits));
+        
+        // Function to add and remove an element
+        function modifyArray(arr) {
+            arr.push("NewElement");
+            arr.pop();
+            return arr;
+        }
+        addRow("Modified array after push and pop", modifyArray([...fruits]));
+        
+        // Squaring numbers using map()
+        let numbers = [1, 2, 3, 4, 5];
+        function squareNumbers(arr) {
+            return arr.map(num => num * num);
+        }
+        addRow("Squared numbers using map()", squareNumbers(numbers));
+        
+        // Filtering odd numbers
+        function filterOddNumbers(arr) {
+            return arr.filter(num => num % 2 !== 0);
+        }
+        addRow("Filtered odd numbers using filter()", filterOddNumbers(numbers));
+        
+        // Object and greeting function
+        let person = {name: "Muskkan", age: 21, occupation: "Student"};
+        function greetPerson(obj) {
+            return `Hello, my name is ${obj.name}, I am ${obj.age} years old and I work as a ${obj.occupation}.`;
+        }
+        addRow("Greeting message from object properties", greetPerson(person));
+        
+        // Function to calculate rectangle area
+        function calculateArea(obj) {
+            return obj.width * obj.height;
+        }
+        let rectangle = {width: 10, height: 5};
+        addRow("Area of a rectangle (width * height)", calculateArea(rectangle));
+        
+        // Function to get object keys
+        function getObjectKeys(obj) {
+            return Object.keys(obj);
+        }
+        addRow("Keys of an object using Object.keys()", getObjectKeys(person));
+        
+        // Function to merge objects
+        function mergeObjects(obj1, obj2) {
+            return Object.assign({}, obj1, obj2);
+        }
+        let obj1 = {a: 1, b: 2};
+        let obj2 = {c: 3, d: 4};
+        addRow("Merged object using Object.assign()", JSON.stringify(mergeObjects(obj1, obj2)));
+        
+        // Sum of numbers using reduce()
+        function sumArray(arr) {
+            return arr.reduce((acc, num) => acc + num, 0);
+        }
+        addRow("Sum of numbers using reduce()", sumArray(numbers));
+    </script>
+</body>
+</html>

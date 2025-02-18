@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styler</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to CSS -->
+    <script src="script.js" defer></script>
+    <!-- Link to JavaScript -->
+</head>
+
+<body>
+
+    <div class="text-here" id="text-container">This is some example text</div>
+
+    <br>
+
+    <!-- Input for color change -->
+    <input type="text" id="colorbox" placeholder="Enter color name or hex">
+    <button id="colorchange">Change Colour</button>
+
+    <br><br>
+
+    <!-- Range slider for font size -->
+    <input type="range" id="fontsize" min="10" max="100" value="55">
+
+    <br><br>
+
+    <!-- Buttons for text styles -->
+    <button id="italic" class="stylebt">Italics</button>
+    <button id="underline" class="stylebt">Underline</button>
+    <button id="bold" class="stylebt">Bold</button>
+
+    <br><br>
+
+    <!-- Dropdown for font selection -->
+    <select id="list">
+        <option value="serif">Serif</option>
+        <option value="sans-serif">Sans-Serif</option>
+        <option value="monospace">Monospace</option>
+        <option value="cursive">Cursive</option>
+        <option value="fantasy">Fantasy</option>
+    </select>
+
+    <br><br>
+
+    <!-- Button to get CSS properties -->
+    <button id="getstyle">Get CSS</button>
+
+    <br><br>
+
+    <!-- Paragraph to display CSS properties -->
+    <p id="css-props"></p>
+
+</body>
+
+</html>
